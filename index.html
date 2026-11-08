@@ -319,6 +319,7 @@ h1 em, .fact b { color: var(--wine) }
 .meta { display: flex; justify-content: space-between; gap: 12px }
 .meta b { white-space: nowrap }
 @media (max-width: 700px) { .cert, .split { grid-template-columns: 1fr; gap: 22px } .logo-img { width: 42px; height: 42px } }
+@media (max-width: 560px) { .icons .mx { display: none } }
 </style>
 </head>
 <body>
@@ -329,6 +330,7 @@ h1 em, .fact b { color: var(--wine) }
   <symbol id="i-vk" viewBox="0 0 24 24"><path d="M12.9 18.2C6.8 18.2 3.3 14 3.1 7h3.1c.1 5.1 2.4 7.3 4.2 7.7V7h2.9v4.4c1.8-.2 3.7-2.2 4.3-4.4h2.9a8.6 8.6 0 0 1-3.9 5.6 9 9 0 0 1 4.6 5.6h-3.2a5.6 5.6 0 0 0-4.7-4v4h-.4Z"/></symbol>
   <symbol id="i-tel" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></symbol>
   <symbol id="i-cal" viewBox="0 0 24 24"><path d="M7 2h2v2h6V2h2v2h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3V2Zm12 8H5v9h14v-9ZM7 12h4v4H7v-4Z"/></symbol>
+  <symbol id="i-max" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 3a9 9 0 1 1-4.6 16.7L3.5 21l1.2-3.8A9 9 0 0 1 12 3Zm0 4a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/></symbol>
 </svg>
 
 
@@ -340,6 +342,7 @@ h1 em, .fact b { color: var(--wine) }
     <div class="icons">
       <a href="https://wa.me/79248554040" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="ico"><use href="#i-wa"/></svg></a>
       <a href="https://t.me/healthypoint_magadan" target="_blank" rel="noopener" aria-label="Telegram"><svg class="ico"><use href="#i-tg"/></svg></a>
+      <a class="mx" href="https://max.ru/channel_HealthyPoint" target="_blank" rel="noopener" aria-label="Max"><svg class="ico"><use href="#i-max"/></svg></a>
       <a class="vk" href="https://vk.com/massag_center" target="_blank" rel="noopener" aria-label="ВКонтакте"><svg class="ico"><use href="#i-vk"/></svg></a>
     </div>
     <a class="btn hbtn" href="https://n1212445.yclients.ru/" target="_blank" rel="noopener">Записаться</a>
@@ -417,7 +420,7 @@ h1 em, .fact b { color: var(--wine) }
       <div class="sec-head"><h2 class="unblur">Как записаться</h2></div>
       <div class="steps">
         <div class="step rise"><span class="n">01</span><h3>Выберите процедуру</h3><p>Описания и цены есть в разделе услуг. Не знаете, что выбрать? Напишите, подскажем.</p></div>
-        <div class="step rise"><span class="n">02</span><h3>Запишитесь удобным способом</h3><p>Онлайн видно свободные окна и мастеров. Или напишите в WhatsApp, Telegram, ВКонтакте, позвоните.</p><div class="step-cta"><a class="btn" href="https://n1212445.yclients.ru/" target="_blank" rel="noopener">Выбрать время</a><a class="btn-out" href="https://wa.me/79248554040" target="_blank" rel="noopener">WhatsApp</a></div></div>
+        <div class="step rise"><span class="n">02</span><h3>Запишитесь удобным способом</h3><p>Онлайн видно свободные окна и мастеров. Или напишите в WhatsApp, Telegram, Max, ВКонтакте, позвоните.</p><div class="step-cta"><a class="btn" href="https://n1212445.yclients.ru/" target="_blank" rel="noopener">Выбрать время</a><a class="btn-out" href="https://wa.me/79248554040" target="_blank" rel="noopener">WhatsApp</a></div></div>
         <div class="step rise"><span class="n">03</span><h3>Приходите</h3><p>Советская, 23. Работаем каждый день с 10:00 до 20:00.</p></div>
       </div>
     </div>
@@ -440,6 +443,7 @@ h1 em, .fact b { color: var(--wine) }
         <div class="soc">
           <a href="https://wa.me/79248554040" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="ico"><use href="#i-wa"/></svg></a>
           <a href="https://t.me/healthypoint_magadan" target="_blank" rel="noopener" aria-label="Telegram"><svg class="ico"><use href="#i-tg"/></svg></a>
+          <a class="mx" href="https://max.ru/channel_HealthyPoint" target="_blank" rel="noopener" aria-label="Max"><svg class="ico"><use href="#i-max"/></svg></a>
           <a href="https://vk.com/massag_center" target="_blank" rel="noopener" aria-label="ВКонтакте"><svg class="ico"><use href="#i-vk"/></svg></a>
         </div>
       </div>
@@ -522,8 +526,11 @@ const PRICES = {
     ["LPG-массаж", 2800],
   ],
   "Обёртывание": [
-    ["Прессотерапия", 1090],
     ["Обёртывание в термоодеяле", 3300],
+  ],
+  "Прессотерапия": [
+    ["Прессотерапия 20 минут", 1090],
+    ["Прессотерапия всего тела, 30 минут", 1590],
   ],
   "SPA": [
     ["SPA для ножек или для ручек", 2500],
@@ -618,7 +625,8 @@ const YC_ID = {
   "Мадеротерапия лица, 60 минут": "s23019297", "Мадеротерапия 90 минут": "s23019303", "Мадеротерапия 120 минут": "s23019306",
   "Лазерный липолиз": "s16637258", "Кавитация": "s16637158", "Кавитация, 20 минут": "s16637158",
   "RF-лифтинг или вакуум, 20 минут": "s16637204", "RF-лифтинг лица и тела": "s16637204", "Вакуум с RF": "s16637204",
-  "LPG-массаж": "s19656245", "Прессотерапия": "s16637129", "Обёртывание в термоодеяле": "s16637438",
+  "LPG-массаж": "s19656245", "Прессотерапия": "s16637129", "Прессотерапия 20 минут": "s16637129",
+  "Прессотерапия всего тела, 30 минут": "s19407156","Обёртывание в термоодеяле": "s16637438",
   "SPA «Ягодный десерт»": "s19217253", "SPA-программа «Ягодный десерт»": "s19217253", "SPA «Молочная девочка»": "s19217487",
   "SPA «Шоколадный»": "s19217602", "SPA «Медовая история»": "s16795269", "SPA «Праздничный»": "s29996121", "SPA Вариант 1": "s16636654",
   "Массаж, обёртывание и прессотерапия": "s16636654", "SPA Вариант 2": "s16637082",
